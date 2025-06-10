@@ -1,0 +1,604 @@
+{
+	"MD_Metadata": {
+		"defaultLocale": {
+			"PT_Locale": {
+				"language": {
+					"LanguageCode": {
+						"_codeList": "http://www.loc.gov/standards/iso639-2/php/code_list.php",
+						"_codeListValue": "eng",
+						"__prefix": "lan",
+						"__text": "eng"
+					},
+					"__prefix": "lan"
+				},
+				"characterEncoding": {
+					"MD_CharacterSetCode": {
+						"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode",
+						"_codeListValue": "utf8",
+						"__prefix": "lan",
+						"__text": "utf8"
+					},
+					"__prefix": "lan"
+				},
+				"__prefix": "lan"
+			},
+			"__prefix": "mdb"
+		},
+		"metadataScope": {
+			"MD_MetadataScope": {
+				"resourceScope": {
+					"MD_ScopeCode": {
+						"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_ScopeCode",
+						"_codeListValue": "dataset",
+						"__prefix": "mcc",
+						"__text": "dataset"
+					},
+					"__prefix": "mdb"
+				},
+				"__prefix": "mdb"
+			},
+			"__prefix": "mdb"
+		},
+		"contact": {
+			"CI_Responsibility": {
+				"role": {
+					"CI_RoleCode": {
+						"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_RoleCode",
+						"_codeListValue": "distributor",
+						"__prefix": "cit",
+						"__text": "distributor"
+					},
+					"__prefix": "cit"
+				},
+				"party": {
+					"CI_Organisation": {
+						"name": {
+							"CharacterString": {
+								"__prefix": "gco",
+								"__text": "JNEC"
+							},
+							"__prefix": "cit"
+						},
+						"individual": {
+							"CI_Individual": {
+								"name": {
+									"CharacterString": {
+										"__prefix": "gco",
+										"__text": "Chimi Rigzin"
+									},
+									"__prefix": "cit"
+								},
+								"positionName": {
+									"CharacterString": {
+										"__prefix": "gco",
+										"__text": "Student"
+									},
+									"__prefix": "cit"
+								},
+								"__prefix": "cit"
+							},
+							"__prefix": "cit"
+						},
+						"__prefix": "cit"
+					},
+					"__prefix": "cit"
+				},
+				"__prefix": "cit"
+			},
+			"__prefix": "mdb"
+		},
+		"dateInfo": {
+			"CI_Date": {
+				"date": {
+					"DateTime": {
+						"__prefix": "gco",
+						"__text": "2025-06-02T00:00:00"
+					},
+					"__prefix": "cit"
+				},
+				"dateType": {
+					"CI_DateTypeCode": {
+						"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_DateTypeCode",
+						"_codeListValue": "revision",
+						"__prefix": "cit",
+						"__text": "revision"
+					},
+					"__prefix": "cit"
+				},
+				"__prefix": "cit"
+			},
+			"__prefix": "mdb"
+		},
+		"metadataStandard": {
+			"CI_Citation": {
+				"title": {
+					"CharacterString": {
+						"__prefix": "gco",
+						"__text": "ISO 19115-3 Geographic Information - Metadata - Part 1: Fundamentals"
+					},
+					"__prefix": "cit"
+				},
+				"edition": {
+					"CharacterString": {
+						"__prefix": "gco",
+						"__text": "2014"
+					},
+					"__prefix": "cit"
+				},
+				"__prefix": "cit"
+			},
+			"__prefix": "mdb"
+		},
+		"otherLocale": {
+			"PT_Locale": {
+				"language": {
+					"LanguageCode": {
+						"_codeList": "http://www.loc.gov/standards/iso639-2/php/code_list.php",
+						"_codeListValue": "eng",
+						"__prefix": "lan",
+						"__text": "eng"
+					},
+					"__prefix": "lan"
+				},
+				"country": {
+					"CountryCode": {
+						"_codeList": "http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm",
+						"_codeListValue": "US",
+						"__prefix": "lan",
+						"__text": "US"
+					},
+					"__prefix": "lan"
+				},
+				"characterEncoding": {
+					"MD_CharacterSetCode": {
+						"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode",
+						"_codeListValue": "utf8",
+						"__prefix": "lan",
+						"__text": "utf8"
+					},
+					"__prefix": "lan"
+				},
+				"__prefix": "lan"
+			},
+			"__prefix": "mdb"
+		},
+		"identificationInfo": {
+			"MD_DataIdentification": {
+				"citation": {
+					"CI_Citation": {
+						"title": {
+							"CharacterString": {
+								"__prefix": "gco",
+								"__text": "Point Data for Phuntshothang 2022"
+							},
+							"__prefix": "cit"
+						},
+						"date": [
+							{
+								"CI_Date": {
+									"date": {
+										"DateTime": {
+											"__prefix": "gco",
+											"__text": "2022-12-11T00:00:00"
+										},
+										"__prefix": "cit"
+									},
+									"dateType": {
+										"CI_DateTypeCode": {
+											"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_DateTypeCode",
+											"_codeListValue": "creation",
+											"__prefix": "cit",
+											"__text": "creation"
+										},
+										"__prefix": "cit"
+									},
+									"__prefix": "cit"
+								},
+								"__prefix": "cit"
+							},
+							{
+								"CI_Date": {
+									"date": {
+										"DateTime": {
+											"__prefix": "gco",
+											"__text": "2023-06-07T00:00:00"
+										},
+										"__prefix": "cit"
+									},
+									"dateType": {
+										"CI_DateTypeCode": {
+											"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_DateTypeCode",
+											"_codeListValue": "publication",
+											"__prefix": "cit",
+											"__text": "publication"
+										},
+										"__prefix": "cit"
+									},
+									"__prefix": "cit"
+								},
+								"__prefix": "cit"
+							}
+						],
+						"citedResponsibleParty": {
+							"CI_Responsibility": {
+								"role": {
+									"CI_RoleCode": {
+										"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_RoleCode",
+										"_codeListValue": "distributor",
+										"__prefix": "cit",
+										"__text": "distributor"
+									},
+									"__prefix": "cit"
+								},
+								"party": {
+									"CI_Organisation": {
+										"name": {
+											"CharacterString": {
+												"__prefix": "gco",
+												"__text": "JNEC"
+											},
+											"__prefix": "cit"
+										},
+										"individual": {
+											"CI_Individual": {
+												"name": {
+													"CharacterString": {
+														"__prefix": "gco",
+														"__text": "Chimi Rigzin"
+													},
+													"__prefix": "cit"
+												},
+												"positionName": {
+													"CharacterString": {
+														"__prefix": "gco",
+														"__text": "Student"
+													},
+													"__prefix": "cit"
+												},
+												"__prefix": "cit"
+											},
+											"__prefix": "cit"
+										},
+										"__prefix": "cit"
+									},
+									"__prefix": "cit"
+								},
+								"__prefix": "cit"
+							},
+							"__prefix": "cit"
+						},
+						"__prefix": "cit"
+					},
+					"__prefix": "mri"
+				},
+				"abstract": {
+					"CharacterString": {
+						"__prefix": "gco",
+						"__text": "The point dataset was collected during a topographic survey at Phuntshothang Yenlag Thromde as part of the 2022 survey camp conducted by Jigme Namgyel Engineering College. It includes spatial point features such as survey control points (SCPs), electric poles, spot elevations, benchmarks, and other isolated features identified during detail picking. The data was collected using GNSS RTK and Total Station instruments and processed using LISCAD software."
+					},
+					"__prefix": "mri"
+				},
+				"purpose": {
+					"CharacterString": {
+						"__prefix": "gco",
+						"__text": "This point dataset captures surveyed features like control points, electric poles, and spot heights in Phuntshothang Yenlag Thromde to support elevation modeling, infrastructure planning, and geospatial referencing, while also serving as a training resource for surveying students."
+					},
+					"__prefix": "mri"
+				},
+				"credit": {
+					"CharacterString": {
+						"__prefix": "gco",
+						"__text": "2nd cohort of Bachelor of Survey and Geoinformatics and 8th cohort of Diploma in surveying accompanied by  Mr. Rinchen Tshewang, Mr. Binay Tamang, Mr. Bhim Ghalley and Mr. Tshering Wangchuk"
+					},
+					"__prefix": "mri"
+				},
+				"pointOfContact": {
+					"CI_Responsibility": {
+						"role": {
+							"CI_RoleCode": {
+								"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_RoleCode",
+								"_codeListValue": "distributor",
+								"__prefix": "cit",
+								"__text": "distributor"
+							},
+							"__prefix": "cit"
+						},
+						"party": {
+							"CI_Organisation": {
+								"name": {
+									"CharacterString": {
+										"__prefix": "gco",
+										"__text": "JNEC"
+									},
+									"__prefix": "cit"
+								},
+								"individual": {
+									"CI_Individual": {
+										"name": {
+											"CharacterString": {
+												"__prefix": "gco",
+												"__text": "Chimi Rigzin"
+											},
+											"__prefix": "cit"
+										},
+										"positionName": {
+											"CharacterString": {
+												"__prefix": "gco",
+												"__text": "Student"
+											},
+											"__prefix": "cit"
+										},
+										"__prefix": "cit"
+									},
+									"__prefix": "cit"
+								},
+								"__prefix": "cit"
+							},
+							"__prefix": "cit"
+						},
+						"__prefix": "cit"
+					},
+					"__prefix": "mri"
+				},
+				"spatialRepresentationType": {
+					"MD_SpatialRepresentationTypeCode": {
+						"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_SpatialRepresentationTypeCode",
+						"_codeListValue": "vector",
+						"__prefix": "mcc",
+						"__text": "vector"
+					},
+					"__prefix": "mri"
+				},
+				"topicCategory": [
+					{
+						"MD_TopicCategoryCode": {
+							"__prefix": "mri",
+							"__text": "farming"
+						},
+						"__prefix": "mri"
+					},
+					{
+						"MD_TopicCategoryCode": {
+							"__prefix": "mri",
+							"__text": "location"
+						},
+						"__prefix": "mri"
+					},
+					{
+						"MD_TopicCategoryCode": {
+							"__prefix": "mri",
+							"__text": "planningCadastre"
+						},
+						"__prefix": "mri"
+					},
+					{
+						"MD_TopicCategoryCode": {
+							"__prefix": "mri",
+							"__text": "structure"
+						},
+						"__prefix": "mri"
+					},
+					{
+						"MD_TopicCategoryCode": {
+							"__prefix": "mri",
+							"__text": "utilitiesCommunication"
+						},
+						"__prefix": "mri"
+					},
+					{
+						"MD_TopicCategoryCode": {
+							"__prefix": "mri",
+							"__text": "elevation"
+						},
+						"__prefix": "mri"
+					}
+				],
+				"extent": {
+					"EX_Extent": {
+						"__prefix": "gex"
+					},
+					"__prefix": "mri"
+				},
+				"resourceMaintenance": {
+					"MD_MaintenanceInformation": {
+						"maintenanceAndUpdateFrequency": {
+							"MD_MaintenanceFrequencyCode": {
+								"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_MaintenanceFrequencyCode",
+								"_codeListValue": "asNeeded",
+								"__prefix": "mmi",
+								"__text": "asNeeded"
+							},
+							"__prefix": "mmi"
+						},
+						"contact": {
+							"CI_Responsibility": {
+								"role": {
+									"CI_RoleCode": {
+										"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_RoleCode",
+										"_codeListValue": "distributor",
+										"__prefix": "cit",
+										"__text": "distributor"
+									},
+									"__prefix": "cit"
+								},
+								"party": {
+									"CI_Organisation": {
+										"name": {
+											"CharacterString": {
+												"__prefix": "gco",
+												"__text": "JNEC"
+											},
+											"__prefix": "cit"
+										},
+										"individual": {
+											"CI_Individual": {
+												"name": {
+													"CharacterString": {
+														"__prefix": "gco",
+														"__text": "Chimi Rigzin"
+													},
+													"__prefix": "cit"
+												},
+												"positionName": {
+													"CharacterString": {
+														"__prefix": "gco",
+														"__text": "Student"
+													},
+													"__prefix": "cit"
+												},
+												"__prefix": "cit"
+											},
+											"__prefix": "cit"
+										},
+										"__prefix": "cit"
+									},
+									"__prefix": "cit"
+								},
+								"__prefix": "cit"
+							},
+							"__prefix": "mmi"
+						},
+						"__prefix": "mmi"
+					},
+					"__prefix": "mri"
+				},
+				"descriptiveKeywords": {
+					"MD_Keywords": {
+						"keyword": {
+							"CharacterString": {
+								"__prefix": "gco",
+								"__text": "Downloadable Data"
+							},
+							"__prefix": "mri"
+						},
+						"thesaurusName": {
+							"_uuidref": "723f6998-058e-11dc-8314-0800200c9a66",
+							"__prefix": "mri"
+						},
+						"__prefix": "mri"
+					},
+					"__prefix": "mri"
+				},
+				"defaultLocale": {
+					"PT_Locale": {
+						"language": {
+							"LanguageCode": {
+								"_codeList": "http://www.loc.gov/standards/iso639-2/php/code_list.php",
+								"_codeListValue": "eng",
+								"__prefix": "lan",
+								"__text": "eng"
+							},
+							"__prefix": "lan"
+						},
+						"characterEncoding": {
+							"MD_CharacterSetCode": {
+								"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_CharacterSetCode",
+								"_codeListValue": "utf8",
+								"__prefix": "lan",
+								"__text": "utf8"
+							},
+							"__prefix": "lan"
+						},
+						"__prefix": "lan"
+					},
+					"__prefix": "mri"
+				},
+				"__prefix": "mri"
+			},
+			"__prefix": "mdb"
+		},
+		"metadataMaintenance": {
+			"MD_MaintenanceInformation": {
+				"maintenanceAndUpdateFrequency": {
+					"MD_MaintenanceFrequencyCode": {
+						"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#MD_MaintenanceFrequencyCode",
+						"_codeListValue": "asNeeded",
+						"__prefix": "mmi",
+						"__text": "asNeeded"
+					},
+					"__prefix": "mmi"
+				},
+				"contact": {
+					"CI_Responsibility": {
+						"role": {
+							"CI_RoleCode": {
+								"_codeList": "standards.iso.org/19115/-3/lan/1.0/codelists.xml#CI_RoleCode",
+								"_codeListValue": "distributor",
+								"__prefix": "cit",
+								"__text": "distributor"
+							},
+							"__prefix": "cit"
+						},
+						"party": {
+							"CI_Organisation": {
+								"name": {
+									"CharacterString": {
+										"__prefix": "gco",
+										"__text": "JNEC"
+									},
+									"__prefix": "cit"
+								},
+								"individual": {
+									"CI_Individual": {
+										"name": {
+											"CharacterString": {
+												"__prefix": "gco",
+												"__text": "Chimi Rigzin"
+											},
+											"__prefix": "cit"
+										},
+										"positionName": {
+											"CharacterString": {
+												"__prefix": "gco",
+												"__text": "Student"
+											},
+											"__prefix": "cit"
+										},
+										"__prefix": "cit"
+									},
+									"__prefix": "cit"
+								},
+								"__prefix": "cit"
+							},
+							"__prefix": "cit"
+						},
+						"__prefix": "cit"
+					},
+					"__prefix": "mmi"
+				},
+				"__prefix": "mmi"
+			},
+			"__prefix": "mdb"
+		},
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"_xmlns:cat": "http://standards.iso.org/iso/19115/-3/cat/1.0",
+		"_xmlns:cit": "http://standards.iso.org/iso/19115/-3/cit/1.0",
+		"_xmlns:gcx": "http://standards.iso.org/iso/19115/-3/gcx/1.0",
+		"_xmlns:gex": "http://standards.iso.org/iso/19115/-3/gex/1.0",
+		"_xmlns:lan": "http://standards.iso.org/iso/19115/-3/lan/1.0",
+		"_xmlns:srv": "http://standards.iso.org/iso/19115/-3/srv/2.0",
+		"_xmlns:mac": "http://standards.iso.org/iso/19115/-3/mac/1.0",
+		"_xmlns:mas": "http://standards.iso.org/iso/19115/-3/mas/1.0",
+		"_xmlns:mcc": "http://standards.iso.org/iso/19115/-3/mcc/1.0",
+		"_xmlns:mco": "http://standards.iso.org/iso/19115/-3/mco/1.0",
+		"_xmlns:mda": "http://standards.iso.org/iso/19115/-3/mda/1.0",
+		"_xmlns:mdb": "http://standards.iso.org/iso/19115/-3/mdb/1.0",
+		"_xmlns:mdt": "http://standards.iso.org/iso/19115/-3/mdt/1.0",
+		"_xmlns:mex": "http://standards.iso.org/iso/19115/-3/mex/1.0",
+		"_xmlns:mrl": "http://standards.iso.org/iso/19115/-3/mrl/1.0",
+		"_xmlns:mds": "http://standards.iso.org/iso/19115/-3/mds/1.0",
+		"_xmlns:mmi": "http://standards.iso.org/iso/19115/-3/mmi/1.0",
+		"_xmlns:mpc": "http://standards.iso.org/iso/19115/-3/mpc/1.0",
+		"_xmlns:mrc": "http://standards.iso.org/iso/19115/-3/mrc/1.0",
+		"_xmlns:mrd": "http://standards.iso.org/iso/19115/-3/mrd/1.0",
+		"_xmlns:mri": "http://standards.iso.org/iso/19115/-3/mri/1.0",
+		"_xmlns:mrs": "http://standards.iso.org/iso/19115/-3/mrs/1.0",
+		"_xmlns:msr": "http://standards.iso.org/iso/19115/-3/msr/1.0",
+		"_xmlns:mdq": "http://standards.iso.org/iso/19157/-2/mdq/1.0",
+		"_xmlns:dqc": "http://standards.iso.org/iso/19157/-2/dqc/1.0",
+		"_xmlns:gco": "http://standards.iso.org/iso/19115/-3/gco/1.0",
+		"_xmlns:gml": "http://www.opengis.net/gml/3.2",
+		"_xmlns:xlink": "http://www.w3.org/1999/xlink",
+		"__prefix": "mdb"
+	}
+}
