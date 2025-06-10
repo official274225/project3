@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Maps | JNEC Geodatabase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: black;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #8acef0;
+            color: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 0;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            gap: 2rem;
+            justify-content: flex-start;
+        }
+         .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            
+        }
+        
+        .jnec-image {
+            width: 250px; 
+            height: 100px; 
+            object-fit: contain;
+            margin-right: 0.5rem; 
+        }
+
+        .site-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: none;
+            min-width: 220px;
+            text-align: left;
+        }
+
+        .site-title h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: left;
+        }
+
+        .site-title p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: left;
+        }
+
+        /* Navigation Bar Styles */
+        .main-nav {
+            background: #ecf0f1;
+            border-bottom: 1px solid #b5d6e8;
+            width: 100%;
+        }
+
+        .main-nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 2rem;
+            margin: 0 auto;
+            padding: 0.5rem 2rem;
+            width: fit-content;
+        }
+
+        .main-nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            padding: 0.5rem 0.8rem;
+        }
+
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section for Web Maps - Similar to index.html */
+        .webmap-hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/jnec5.jpg') no-repeat center/cover;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            flex: 1;
+        }
+
+        .webmap-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .webmap-hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Web Map List Styles - Updated to display over hero background */
+        .webmap-list {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            width: 100%;
+            padding: 2rem;
+            box-sizing: border-box;
+            max-width: 1400px; /* changed from 1200px */
+            margin: 0 auto;
+        }
+        
+        .webmap-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 380px; /* changed from 300px */
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .webmap-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .webmap-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
+            
+            background: #82c7e9;
+            color: black;
+            opacity: 0.8;
+            border-radius: 4px;
+            padding: 0.01rem 0; /* Added padding */
+        }
+        
+        .webmap-card p {
+            margin: 0 0 1rem 0;
+            font-size: 1.3rem;
+            color: black;    
+            border-radius: 4px;
+        }
+        
+        .preview-btn {
+            background: #35b4f3;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            align-self: flex-start;
+            transition: background 0.3s;
+        }
+        
+        .preview-btn:hover {
+            background: #2980b9;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 1.5rem 1rem;
+            background-color: #ecf0f1;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        
+        .contact h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+        
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Map Preview Section */
+        #map-preview-section {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+            background: #fff;
+        }
+        
+        #close-map-preview {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001;
+            background: #35b4f3;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 16px 32px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+            /* Highlight the active link */
+        .main-nav ul li a.active, 
+        .main-nav ul li a:active, 
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+            text-decoration-color: black; /* Optional: Add color to the underline */
+            text-decoration-thickness: 2px; /* Optional: Adjust underline thickness */
+        }
+        /* Card Background Images */
+        .card-1 {
+            background: url('assets/knowledge.png') no-repeat center/cover, rgba(255,255,255,0.9);
+        }
+        .card-2 {
+            background: url('assets/forestry.png') no-repeat center/cover, rgba(255,255,255,0.9);
+        }
+        .card-3 {
+            background: url('assets/explorer.png') no-repeat center/cover, rgba(255,255,255,0.9);
+        }
+        .card-4 {
+            background: url('assets/hospital.png') no-repeat center/cover, rgba(255,255,255,0.9);
+        }
+        .card-5 {
+            background: url('assets/insights.png') no-repeat center/cover, rgba(255,255,255,0.9);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .site-title h1, .site-title p {
+                text-align: center;
+            }
+            
+            .webmap-hero {
+                padding: 2rem 1rem;
+                min-height: auto;
+            }
+            
+            .webmap-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .webmap-hero p {
+                font-size: 1.2rem;
+            }
+            
+            .webmap-list {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+            }
+            
+            .webmap-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo & Title -->
+    <header>
+        <div class="header-container">
+            <img src="assets/college logo.png" alt="College Logo" class="logo">
+            <img src="assets/JNEC.png" alt="JNEC Image" class="jnec-image">
+            <div class="site-title">
+                <h1>JNEC Geodatabase</h1>
+                <p>Get spatial data for academic excellence</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="web map.html" class="active">Web Map</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Web Map List -->
+    <section class="webmap-hero">
+       
+        <div class="webmap-list">
+            <!-- Web Map 1 -->
+            <div class="webmap-card card-1">
+                <h3>Knowledge Trails Map</h3>
+                <p>Discover Schools & Colleges in Bhutan</p>
+                <button class="preview-btn" onclick="previewMap('//gis-web-application.github.io/Education_Gateway/')">Preview</button>
+            </div>
+            
+            <!-- Web Map 2 -->
+            <div class="webmap-card card-2">
+                <h3>Bhutan Forestry</h3>
+                <p>An interactive geospatial platform visualizing Bhutan's protected forest network</p>
+                <button class="preview-btn" onclick="previewMap('//chimi-rigzin.github.io/WebMap-chimirigzin/')">Preview</button>
+            </div>
+            
+            <!-- Web Map 3 -->
+            <div class="webmap-card card-3">
+                <h3>Population Density</h3>
+                <p>Discover the population density in Bhutan</p>
+                <button class="preview-btn" onclick="previewMap('//bhutan-explorer.vercel.app/')">Preview</button>
+            </div>
+            
+            <!-- Web Map 4 -->
+            <div class="webmap-card card-4">
+                <h3>Hospital Influence</h3>
+                <p>Know your Dzongkhag's hospital's influece within your Dzongkhag</p>
+                <button class="preview-btn" onclick="previewMap('//lbhai-10.github.io/upload/')">Preview</button>
+            </div>
+
+            <!-- Web Map 5 -->
+            <div class="webmap-card card-5">
+                <h3>Bhutan Geoinsights</h3>
+                <p>Explore insights and discover the story of Bhutan's demography</p>
+                <button class="preview-btn" onclick="previewMap('//gis-web-application.github.io/Bhutan_Geoinsights/')">Preview</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Preview Section -->
+    <div id="map-preview-section">
+        <iframe id="map-preview-iframe" src="about:blank" style="width:100%; height:100%; border:none;"></iframe>
+        <button id="close-map-preview" style="position:fixed; top:20px; right:20px; z-index:1001; background:#35b4f3; color:#fff; border:none; border-radius:4px; padding:10px 15px; font-weight:bold; cursor:pointer;">Close Preview</button>
+    </div>
+
+    <!-- Contact Section (moved to bottom) -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or support, reach out to us at:</p>
+        <a href="mailto:mimphuyel.jnec@rub.edu.bt">mimphuyel.jnec@rub.edu.bt</a>
+    </section>
+
+    <script>
+        function previewMap(url) {
+            document.getElementById('map-preview-iframe').src = url;
+            document.getElementById('map-preview-section').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        document.getElementById('close-map-preview').addEventListener('click', function() {
+            document.getElementById('map-preview-section').style.display = 'none';
+            document.getElementById('map-preview-iframe').src = 'about:blank';
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+</body>
+</html>

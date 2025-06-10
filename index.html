@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | JNEC Geodatabase</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: black;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #8acef0;
+            color: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 0; /* Remove extra padding */
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            gap: 2rem;
+            justify-content: flex-start;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+          
+        }
+
+        .jnec-image {
+            width: 250px; 
+            height: 100px; 
+            object-fit: contain;
+            margin-right: 0.5rem; 
+        }
+
+        .site-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: none;
+            min-width: 220px;
+            text-align: left; 
+        }
+
+        .site-title h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: left;
+        }
+
+        .site-title p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            text-align: left;
+        }
+
+    
+        .main-nav ul {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            list-style: none;
+            gap: 2rem;
+            margin: 0 auto;
+            padding: 0.5rem 2rem;
+            width: fit-content;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            padding: 0.5rem 0.8rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Hero Section - Enlarged */
+        .hero {
+            text-align: center;
+            padding: 8rem 2rem; /* Increased padding */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/jnec4.jpg') no-repeat center/cover;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem; /* Larger font */
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero h2 {
+            font-size: 3rem; /* Larger font */
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);                       
+        }
+
+        .hero p {
+            font-size: 3rem; /* Larger font */
+            max-width: 800px;
+            margin: 0 auto 3rem; /* More spacing */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* About Us Section */
+        .about {
+            padding: 1rem 1rem; /* Slightly more padding */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        .about p {
+            text-align: center;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .member {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .member h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .member p {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 1.5rem 1rem; /* Decreased padding */
+            background-color: #ecf0f1;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        .contact a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #3498db;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        /* Navigation Bar Styles */
+        .main-nav {
+            background: #ecf0f1; /* Same as .contact background */
+            border-bottom: 1px solid #b5d6e8;
+            width: 100%;
+        }
+
+        .main-nav ul {
+            display: flex;
+            justify-content: center; /* Center menu horizontally */
+            align-items: center;
+            list-style: none;
+            gap: 2rem;
+            margin: 0 auto;
+            padding: 0.5rem 2rem;
+            width: fit-content;
+        }
+
+        .main-nav ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+            padding: 0.5rem 0.8rem;
+        }
+
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+        }
+            /* Highlight the active link */
+        .main-nav ul li a.active, 
+        .main-nav ul li a:active, 
+        .main-nav ul li a:hover {
+            text-decoration: underline;
+            text-decoration-color: black; /* Optional: Add color to the underline */
+            text-decoration-thickness: 2px; /* Optional: Adjust underline thickness */
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                border-top: none;
+            }
+            
+            nav ul li {
+                margin: 0.3rem 0;
+            }
+            
+            .hero {
+                padding: 5rem 1.5rem;
+                min-height: 50vh;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .site-title h1, .site-title p {
+                text-align: left;
+            }
+            nav ul {
+                justify-content: flex-start;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo & Title Only -->
+    <header>
+        <div class="header-container">
+            <img src="assets/college logo.png" alt="College Logo" class="logo">
+            <img src="assets/JNEC.png" alt="JNEC Image" class="jnec-image">
+            <div class="site-title">
+                <h1>JNEC Geodatabase</h1>
+                <p>Get spatial data for academic excellence</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- New Navigation Bar Below Header -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="web map.html">Web Map</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+       <h2>Welcome to</h2>
+        <h1>Jigme Namgyel Engineering College<br>Geo-Spatial Database System</h1>
+        <p>where you find your spatial data for academic excellence.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>
+            We are a team of dedicated students from Jigme Namgyel Engineering College, working on a project to create a comprehensive geospatial database system. Our goal is to provide easy access to spatial data for academic and research purposes. This project was inspired by 
+            <a href="https://nsdi.systems.gov.bt/#/" target="_blank" style="color:#3498db; text-decoration:underline;">Bhutan NSDI System</a> and it replicates the same system for JNEC.
+        </p>
+              
+        <div class="team">
+            <!-- Team Member 1 (Guide) -->
+            <div class="member">
+                <img src="assets/mim.jpg" alt="Guide">
+                <h3>Mr. Mim Prasad Phuyel</h3>
+                <p>Project Guide</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="member">
+                <img src="assets/Lungten.jpeg" alt="Member 1">
+                <h3>Lungten Norbu</h3>              
+                <p>Std. ID: 05210061</p>
+                <p>Lead Developer & GIS Data Specialist</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="member">
+                <img src="assets/karma.jpg" alt="Member 2">
+                <h3>Karma Tshering Dema</h3>                
+                <p>Std. ID: 05210058</p>
+                <p>Co-Developer & GIS Data Specialist</p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="member">
+                <img src="assets/chimi.jpg" alt="Member 3">
+                <h3>Chimi Rigzin</h3>               
+                <p>Std. ID: 05210055</p>
+                <p>Co-Developer & GIS Data Specialist</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries or support, reach out to us at:</p>
+        <a href="mailto:mimphuyel.jnec@rub.edu.bt">mimphuyel.jnec@rub.edu.bt</a>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" onclick="scrollToTop()">↑</div>
+
+    <!-- JavaScript for Scroll Button -->
+    <script>
+        // Show/hide scroll button based on scroll position
+        window.onscroll = function() {
+            const scrollBtn = document.querySelector('.scroll-top');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        };
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

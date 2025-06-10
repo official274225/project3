@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "git": "^0.1.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "project",
+  "version": "1.0.0",
+  "main": "data.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
